@@ -9,8 +9,8 @@ class Client(BaseClient):
     user_id = ''
     payload = {}
 
-    def __init__(self):
-        self.user_name = input('Введите id пользователя: ')
+    def __init__(self, user_name):
+        self.user_name = user_name
         self.payload = {'v': '5.57', 'user_ids': self.user_name}
         self.user_id = self.get_id()
 
